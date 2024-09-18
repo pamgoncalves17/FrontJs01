@@ -1,5 +1,1 @@
-import "./styles.css";
-
-document.getElementById("app").innerHTML = `
-<h1>Hello JavaScript!</h1>
-`;
+//INICIO DO PROJETO CALCULADORA HTML/CSS/JS
