@@ -3,6 +3,7 @@ const app = document.querySelector("#app");
 const numero1 = document.querySelector("#numero1");
 const numero2 = document.querySelector("#numero2");
 const btnCalcular = document.querySelector("#btn-calcular");
+const btnLimpar = document.querySelector("#btn-limpar");
 
 const resultados = document.querySelector(".resultados");
 const soma = document.querySelector(".soma");
@@ -21,9 +22,23 @@ function calcular() {
 
   //return res;
 }
-calcular();
+function limparFormulario() {
+  const n1 = numero1.value; // REFERENCIA numero1
+  const n2 = numero2.value; // CONVERSÃO P/ NUMBER
+  if (n1 && n2) {
+    const form = document.querySelector("form");
+    form.reset(); // LIMPAR O FORMULARIO
+    document.querySelector("#numero1").focus(); // FOCA NO 01
+  }
+}
 
 // ADICIONAR ESCUTADOR DE EVENTOS
 btnCalcular.addEventListener("click", function (evento) {
-  alert(calcular());
+  evento.preventDefault(); // DEIXA DE ATUALIZAR...
+  calcular();
+});
+
+btnLimpar.addEventListener("click", function (evento) {
+  evento.preventDefault();
+  limparFormulario();
 });
