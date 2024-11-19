@@ -19,6 +19,9 @@ function calcular() {
   subtracao.innerHTML = `A subtracao de ${n1} e ${n2} é: ${n1 - n2}`;
   multiplicacao.innerHTML = `A multiplicacao de ${n1} e ${n2} é: ${n1 * n2}`;
   divisao.innerHTML = `A divisao de ${n1} e ${n2} é: ${n1 / n2}`;
+  //MANUPULANDO DOM COM JAVASCRIPT
+  resultados.classList.add("mostrar");
+  resultados.classList.remove("esconder");
 
   //return res;
 }
